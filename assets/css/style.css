@@ -20,7 +20,8 @@ body {
     width: 80%;
     height: 80vh;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    /* box-shadow: 15px 5px 10px rgba(0, 0, 0, .212); */
+    /* box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75); */
 }
 
 .form-image {
@@ -43,6 +44,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #fff;    
+    padding: 3rem;
 }
 
 .form-header {
@@ -65,16 +67,13 @@ body {
 }
 
 .login-button button:hover {
-    background-color: #6c63ff;
+    background-color: #6b63fff1;
 }
 
 .login-button button a {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
-}
-.form-header {
-    margin-bottom: 3rem; 
 }
 
 .form-header h1::after {
@@ -90,7 +89,7 @@ body {
 
 .input-group {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: wrap; /*ficar um do lado do outro*/
    justify-content: space-between;
    padding: 1rem 0;
 }
@@ -102,12 +101,77 @@ body {
 }
 
 .input-box input {
-    margin: 0.6rem;
+    margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 6px #000001;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c; 
 }
 
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
 
+.input-box input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
 
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem,;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.60rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #6b63fff1;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.90rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* @media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and(max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+} */
